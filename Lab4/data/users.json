@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 0,
+    "Name": "Ivan Rybakov",
+    "Email": "feynman.navi@gmail.com",
+    "Age": 23,
+    "Address": "Soborna Street, Mykolaiv, Ukraine"
+  },
+  {
+    "Id": 1,
+    "Name": "John Doe",
+    "Email": "john.doe@example.com",
+    "Age": 30,
+    "Address": "123 Main Street, Anytown, USA"
+  }
+]
