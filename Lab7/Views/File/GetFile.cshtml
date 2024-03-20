@@ -1,0 +1,27 @@
+﻿@model Lab7.Models.FormInfoModel
+
+@{
+    ViewData["Title"] = "Ivan Rybakov";
+}
+
+<form method="post">
+    <div>
+        <label for="firstName">Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="John"  required>
+    </div>
+    <div>
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" placeholder="Swanson" required>
+    </div>
+    <div>
+        <label for="fileName">File Name:</label>
+        <input type="text" id="fileName" name="fileName" placeholder="File1" required>
+    </div>
+    <button type="submit">Proceed</button>
+</form>
+
+<style>
+    body {
+        text-align: center;
+    }
+</style>
