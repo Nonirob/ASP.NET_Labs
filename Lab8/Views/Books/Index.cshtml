@@ -1,0 +1,53 @@
+﻿@model List<Lab8.Models.Book>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Shop</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 25px;
+            margin: 40px;
+        }
+
+        table {
+            margin: auto;
+            width: 60%;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Products</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Publish Date</th>
+        </tr>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Name</td>
+                <td>@book.Author</td>
+                <td>@book.Price$</td>
+                <td>@book.PublishDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </table>    
+
+    <ul>
+        @foreach (var book in Model)
+        {
+            <li>@book.Id. @book.Name - @book.Author - @book.Price$, @book.PublishDate.ToString("yyyy-MM-dd")</li>
+        }
+    </ul>
+
+</body>
+</html>
