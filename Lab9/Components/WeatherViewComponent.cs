@@ -12,7 +12,7 @@ namespace Lab9.Components
         public WeatherViewComponent(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _apiKey = "dec76bbaf8f2ecf4ef1fde9d63f75f62";
+            _apiKey = "ab8f8f48fc90a4e4c37b5793dafc084b";
         }
 
         public async Task<IViewComponentResult> InvokeAsync(string region)
