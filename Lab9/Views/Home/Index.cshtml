@@ -1,0 +1,30 @@
+﻿@model List<Lab9.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <style>
+        body {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border: 1px solid black;
+            width: 80%;
+            padding: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Погода</h1>
+    @await Component.InvokeAsync("Weather", "Mykolaiv")
+    
+    <h1>Продукти</h1>
+    @await Component.InvokeAsync("Products", Model)
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model List<Lab9.Models.Product>
+
+<table>
+    <thead>
+        <tr>
+            <th>Айді</th>
+            <th>Назва</th>
+            <th>Ціна (грн)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
