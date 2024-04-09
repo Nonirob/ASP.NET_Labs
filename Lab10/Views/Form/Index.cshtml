@@ -1,0 +1,73 @@
+﻿@model Lab10.Models.ConsultationForm
+
+<h2>Let's Schedule Our Meeting!</h2>
+
+<form method="post">
+    <label for="UserName">Your Name and Surname:</label><br />
+    <input type="text" id="UserName" name="UserName" required /><br />
+
+    <label for="Email">Your Email:</label><br />
+    <input type="email" id="Email" name="Email" required /><br />
+    <label for="AppointmentDate">Preferred Consultation Date:</label><br />
+    <input type="date" id="AppointmentDate" name="AppointmentDate" required min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")"/><br />
+    <label for="ChosenProduct">Choose a Product:</label><br />
+    <select id="ChosenProduct" name="ChosenProduct">
+        <option value="">Select a product</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="Основи">Основи</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="C#">C#</option>
+    </select><br />
+
+    <input type="submit" value="Submit" formaction="@Url.Action("Index", "Form")"/>
+</form>
+
+
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #0f3057;
+        color: #f9f9f9;
+        font-size: 16px;
+        padding: 30px;
+        text-align: left;
+    }
+
+    input[type="text"], input[type="email"], input[type="date"], select {
+        background-color: #1b5284;
+        color: #ffffff;
+        border: 2px solid #f9f9f9;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 12px;
+        width: 70%;
+    }
+
+    input[type="submit"] {
+        background-color: #ffc107;
+        color: #0f3057;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 18px;
+        margin: 20px 0;
+        padding: 15px 40px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #ffeb3b;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+</style>
