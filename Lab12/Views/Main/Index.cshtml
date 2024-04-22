@@ -1,0 +1,107 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model IndexModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main</title>
+<style>
+    body {
+        background-color: #336699;
+        color: #FFFFFF;
+        font-family: "Arial", sans-serif;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    th {
+        background-color: #FF9933;
+    }
+
+    td {
+        background-color: #66CCCC;
+    }
+
+    a {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    input[type="submit"] {
+        padding: 12px 24px;
+        background-color: #FFCC66;
+        color: #333333;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #FF9900;
+    }
+</style>
+
+
+</head>
+<body>
+<h2>Customers:</h2>
+
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.Users)
+    {
+        <tr>
+            <td>@item.Username</td>
+            <td>@item.Surname</td>
+            <td>@item.Age</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Main" asp-route-id="@item.Id">Edit user</a>
+            </td>
+            <td>
+                <form asp-controller="Main" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Delete user"/>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    <a asp-action="Create" asp-controller="Main">Add new user</a>
+</p>
+
+<h2>Companies:</h2>
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    @foreach (var item in Model.Companies)
+    {
+        <tr>
+            <td>@item.Name</td>
+        </tr>
+    }
+</table>
+
+</body>
+
+</html>

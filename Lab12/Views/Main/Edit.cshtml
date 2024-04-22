@@ -1,0 +1,85 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit</title>
+<style>
+    body {
+        background-color: #f0f0f0;
+        color: #333333;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+        color: #333333;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        border-color: #333333;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+</head>
+<body>
+<h2>Edit user info:</h2>
+
+<form asp-action="edit" asp-controller="Main" asp-route-id="@Model.Id">
+    <p>
+        <label asp-for="Username">New username:</label><br/>
+        <input type="text" asp-for="Username"/>
+    </p>
+    <p>
+        <label asp-for="Surname">New surname:</label><br/>
+        <input type="text" asp-for="Surname"/>
+    </p>
+    <p>
+        <label asp-for="Age">New age:</label><br/>
+        <input type="number" asp-for="Age"/>
+    </p>
+    <p>
+        <input type="submit" value="Save update"/>
+    </p>
+</form>
+
+</body>
+</html>
