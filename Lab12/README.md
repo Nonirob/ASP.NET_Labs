@@ -1,19 +1,19 @@
 <h1>Results:</h1>
 
 <h3>Index page:</h3>
-![Screenshot 2024-04-22 at 21.17.19.png](Screenshot%202024-04-22%20at%2021.17.19.png)
+![img.png](img.png)
 
 <h3>Edit user info:</h3>
-![Screenshot 2024-04-22 at 21.17.28.png](Screenshot%202024-04-22%20at%2021.17.28.png)
+![img_1.png](img_1.png)
 
 <h3>Updated user info:</h3>
-![Screenshot 2024-04-22 at 21.20.25.png](Screenshot%202024-04-22%20at%2021.20.25.png)
+![img_2.png](img_2.png)
 
 <h3>Add new user:</h3>
-![Screenshot 2024-04-22 at 21.18.21.png](Screenshot%202024-04-22%20at%2021.18.21.png)
+![img_4.png](img_4.png)
 
 <h3>Added user:</h3>
-![Screenshot 2024-04-22 at 21.18.27.png](Screenshot%202024-04-22%20at%2021.18.27.png)
+![img_5.png](img_5.png)
 
 <h3>User list after erasing:</h3>
-![Screenshot 2024-04-22 at 21.18.42.png](Screenshot%202024-04-22%20at%2021.18.42.png)
+![img_6.png](img_6.png)
